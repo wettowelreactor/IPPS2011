@@ -1,0 +1,45 @@
+Hospital Charge Data
+========================================================
+author: Camille Roussel
+date: 6/19/2014
+
+Hospital Charge Data
+========================================================
+
+Centers for Medicare & Medicaid Services is releasing hospital charge data that shows the significant variation across the country and within communities in what providers charge for common services. 
+
+https://data.cms.gov/Medicare/Inpatient-Prospective-Payment-System-IPPS-Provider/97k6-zzx3
+
+Price Craziness
+===
+
+- The differences in charges for common procedures are extreme.
+- The difference between charges vs. payments is also extreme.
+- This tool makes it easy to compare various states to each other and the national average.
+
+How to read a box plot
+========================================================
+
+```{r, echo=FALSE}
+data(mtcars)
+boxplot(mtcars$hp, boxwex=.5)
+text(x=1,y=52, c('Min (excluding outliers)'), pos=4, offset=3)
+text(x=1,y=96.5, c('Lower Quartile (<= 25%)'), pos=4, offset=4)
+text(x=1,y=123, c('Median (<= 50%)'), pos=4, offset=4)
+text(x=1,y=180, c('Upper Quartile (<= 75%)'), pos=4, offset=4)
+text(x=1,y=263, c('Max (excluding outliers)'), pos=4, offset=3)
+text(x=1,y=335, c('Outliers'), pos=4, offset=2)
+```
+
+Definitions
+========================================================
+- [Diagnosis-related group (DRG) is a system to classify hospital cases into one of originally 467 groups][1]
+
+- Average Covered Charges (Charges) is the provider's average charge for services covered by Medicare for all discharges in the DRG. These will vary from hospital to hospital because of differences in hospital charge structures.
+
+- Average Total Payments (Payments) is the average of Medicare payments to the provider for the DRG including the DRG amount, teaching, disproportionate share, capital, and outlier payments for all cases. Also included are co-payment and deductible amounts that the patient is responsible for.
+
+- Average Medicare Payments (Medicare Payments) is the average payment the government is responsible for.
+
+
+[1]: http://en.wikipedia.org/wiki/Diagnosis-related_group
