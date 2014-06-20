@@ -8,6 +8,8 @@
 .Rdata
 .Rproj.user
 IPPS2011.Rproj
+.cache/
+shinyapps/
 
 # OSX
 .DS_Store
