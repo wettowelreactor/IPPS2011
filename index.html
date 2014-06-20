@@ -73,8 +73,29 @@
     <h2>How to read a box plot</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
 
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">data(mtcars)
+boxplot(mtcars$hp, boxwex=.5)
+text(x=1,y=52, pos=4, offset=3,
+     c(&#39;Min (excluding outliers)&#39;))
+text(x=1,y=96.5, pos=4, offset=4,
+     c(&#39;Lower Quartile (&lt;= 25%)&#39;))
+text(x=1,y=123, pos=4, offset=4, 
+     c(&#39;Median (&lt;= 50%)&#39;))
+text(x=1,y=180, pos=4, offset=4,
+     c(&#39;Upper Quartile (&lt;= 75%)&#39;))
+text(x=1,y=263, pos=4, offset=3,
+     c(&#39;Max (excluding outliers)&#39;))
+text(x=1,y=335, pos=4, offset=2,
+     c(&#39;Outliers&#39;))
+</code></pre>
+
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
